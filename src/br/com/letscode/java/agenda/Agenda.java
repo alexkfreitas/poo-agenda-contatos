@@ -39,6 +39,10 @@ public class Agenda {
         if (indice >= 0 && indice < this.qtdContatos) {
             this.contatos[indice] = null;
             this.qtdContatos--;
+            /* FIXME
+                existe um bug aqui - precisa realocar todos os elementos para
+                ocupar a posição que ficou vazia
+            */
         } else {//[0] [1] [3] [4] [5] []
             System.err.println("Este não é um índice válido. Tente novamente.");
         }
